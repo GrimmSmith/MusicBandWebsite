@@ -2,93 +2,98 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>About Us</title>
+  <title>Band Name - Home</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    .gallery img {
-      width: 200px;
-      margin: 10px;
-      border-radius: 8px;
+    .hero {
+      text-align: center;
+      padding: 4em 2em;
+      background: linear-gradient(to right, #111, #222);
     }
-    .timeline {
-      border-left: 3px solid #f0f0f0;
-      margin: 2em 0;
-      padding-left: 1em;
-    }
-    .timeline-entry {
-      margin-bottom: 1.5em;
-    }
-    .timeline-entry h3 {
-      margin: 0;
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 0.2em;
       color: #ffd700;
     }
+    .hero p {
+      font-size: 1.2em;
+      color: #ccc;
+    }
+    .highlight {
+      background: #333;
+      padding: 2em;
+      margin: 2em auto;
+      max-width: 600px;
+      border-radius: 8px;
+    }
+    .highlight h2 {
+      color: #00ffff;
+    }
+    .video-feature {
+      text-align: center;
+      margin: 2em 0;
+    }
     iframe {
-      margin: 1em 0;
       width: 100%;
       max-width: 560px;
       height: 315px;
+      border-radius: 8px;
+    }
+    .subscribe {
+      text-align: center;
+      margin: 2em 0;
+    }
+    .subscribe input {
+      padding: 0.5em;
+      margin-right: 0.5em;
+      width: 250px;
+    }
+    .subscribe button {
+      padding: 0.5em 1em;
+      background: #00ffff;
+      border: none;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>About the Band</h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="discography.html">Discography</a>
       <a href="tour.html">Tour Dates</a>
+      <a href="videos.html">Videos</a>
+      <a href="presskit.html">Press Kit</a>
+      <a href="documentary.html">Documentary</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <main>
-    <section>
-      <h2>Our Story</h2>
-      <p>Formed in 2020, Band Name blends rock, soul, and electronic vibes to create a sound that’s both nostalgic and fresh.</p>
+    <section class="hero">
+      <h1>Band Name</h1>
+      <p>Genre-bending sound. Electrifying performances. Welcome to our world.</p>
     </section>
 
-    <section class="gallery">
-      <h2>Live Moments</h2>
-      <img src="https://www.pexels.com/photo/a-band-performing-together-8044068/" alt="Band performing together">
-      <img src="https://www.pexels.com/photo/music-band-performing-during-the-day-7503244/" alt="Daytime performance">
+    <section class="highlight" id="latest-event">
+      <h2>Next Show</h2>
+      <p>Loading next event...</p>
     </section>
 
-    <section>
-      <h2>Behind the Scenes</h2>
-      <iframe src="https://www.youtube.com/embed/DbLtQy00Sm8" title="10 Music Documentaries you NEED to see!"></iframe>
-      <iframe src="https://www.youtube.com/embed/TjEhKtnOzoo" title="Filming a SHORT DOCUMENTARY as a ONE MAN BAND ..."></iframe>
-      <iframe src="https://www.youtube.com/embed/BabX8k1myTc" title="The Musicians Behind The Stars | Hired Gun | Full Music ..."></iframe>
-      <iframe src="https://www.youtube.com/embed/8ZAjlptPaXg" title="Going backstage with an indie band | 2025 music documentary"></iframe>
-      <iframe src="https://www.youtube.com/embed/fQT3DGAoFI8" title="Coldplay: Behind the Stage (FULL DOCUMENTARY) Chris ..."></iframe>
-      <iframe src="https://www.youtube.com/embed/BZxKi2Qr7DI" title="How We Captured Abbey Road Magic in One Take — Behind ..."></iframe>
+    <section class="video-feature">
+      <h2>Featured Video</h2>
+      <iframe src="https://www.youtube.com/embed/DbLtQy00Sm8" title="Band Documentary"></iframe>
     </section>
 
-    <section class="timeline">
-      <h2>Band Timeline</h2>
-      <div class="timeline-entry">
-        <h3>2020</h3>
-        <p>Band formed in [City], first jam session in a garage.</p>
-      </div>
-      <div class="timeline-entry">
-        <h3>2021</h3>
-        <p>Released debut EP and played local venues.</p>
-      </div>
-      <div class="timeline-entry">
-        <h3>2022</h3>
-        <p>First national tour and viral single release.</p>
-      </div>
-      <div class="timeline-entry">
-        <h3>2023</h3>
-        <p>Collaborated with international artists and launched merch line.</p>
-      </div>
-      <div class="timeline-entry">
-        <h3>2024</h3>
-        <p>Performed at major festivals and released second album.</p>
-      </div>
+    <section class="subscribe">
+      <h2>Join Our Mailing List</h2>
+      <form id="subscribe-form">
+        <input type="email" name="email" placeholder="Your email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+      <p id="subscribe-response"></p>
     </section>
   </main>
 
-  <footer>&copy; 2025 Band Name</footer>
-</body>
-</html>
+  <footer>

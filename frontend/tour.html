@@ -4,6 +4,33 @@
   <meta charset="UTF-8" />
   <title>Tour Dates</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .event-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+      justify-content: center;
+      margin-top: 2em;
+    }
+    .event-card {
+      background: #222;
+      border-radius: 8px;
+      padding: 1em;
+      width: 300px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+    .event-card h3 {
+      margin: 0;
+      color: #ffd700;
+    }
+    .event-card p {
+      margin: 0.5em 0;
+    }
+    .event-card a {
+      color: #00ffff;
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -16,9 +43,14 @@
       <a href="contact.html">Contact</a>
     </nav>
   </header>
+
   <main>
-    <ul id="tour-list">Loading tour dates...</ul>
+    <section>
+      <p>Catch us live! Here are our upcoming shows:</p>
+      <div id="event-list" class="event-list">Loading events...</div>
+    </section>
   </main>
+
   <footer>&copy; 2025 Band Name</footer>
   <script src="script.js"></script>
 </body>

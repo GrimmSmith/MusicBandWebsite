@@ -1,36 +1,83 @@
+/* Base styling */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background: #111;
   color: #eee;
+  line-height: 1.6;
 }
 
+/* Header and navigation */
 header {
   background: #222;
   padding: 1em;
   text-align: center;
 }
 
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 0.5em;
+}
+
 nav a {
-  margin: 0 1em;
   color: #f0f0f0;
   text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
+  color: #ffd700;
   text-decoration: underline;
 }
 
+/* Main content */
 main {
   padding: 2em;
+  max-width: 1000px;
+  margin: auto;
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 1em;
   background: #222;
-  position: fixed;
+  color: #aaa;
+  position: relative;
   bottom: 0;
   width: 100%;
+  margin-top: 2em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main {
+    padding: 1em;
+  }
+
+  iframe {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+/* Utility classes */
+.error {
+  color: red;
+  font-weight: bold;
+}
+
+.no-events {
+  color: #ccc;
+  font-style: italic;
 }
