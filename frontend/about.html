@@ -4,6 +4,31 @@
   <meta charset="UTF-8" />
   <title>About Us</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .gallery img {
+      width: 200px;
+      margin: 10px;
+      border-radius: 8px;
+    }
+    .timeline {
+      border-left: 3px solid #f0f0f0;
+      margin: 2em 0;
+      padding-left: 1em;
+    }
+    .timeline-entry {
+      margin-bottom: 1.5em;
+    }
+    .timeline-entry h3 {
+      margin: 0;
+      color: #ffd700;
+    }
+    iframe {
+      margin: 1em 0;
+      width: 100%;
+      max-width: 560px;
+      height: 315px;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -16,25 +41,54 @@
       <a href="contact.html">Contact</a>
     </nav>
   </header>
+
   <main>
     <section>
       <h2>Our Story</h2>
-      <p>Formed in 2020, Band Name blends rock, soul, and electronic vibes to create a sound that’s both nostalgic and fresh. With roots in [City], we’ve toured across continents and built a loyal fanbase through raw energy and heartfelt lyrics.</p>
+      <p>Formed in 2020, Band Name blends rock, soul, and electronic vibes to create a sound that’s both nostalgic and fresh.</p>
     </section>
-    <section>
-      <h2>Members</h2>
-      <ul>
-        <li><strong>Alex</strong> – Vocals & Guitar</li>
-        <li><strong>Rhea</strong> – Drums</li>
-        <li><strong>Sam</strong> – Bass</li>
-        <li><strong>Lena</strong> – Synth & Backing Vocals</li>
-      </ul>
+
+    <section class="gallery">
+      <h2>Live Moments</h2>
+      <img src="https://www.pexels.com/photo/a-band-performing-together-8044068/" alt="Band performing together">
+      <img src="https://www.pexels.com/photo/music-band-performing-during-the-day-7503244/" alt="Daytime performance">
     </section>
+
     <section>
-      <h2>Influences</h2>
-      <p>Inspired by legends like Radiohead, Florence + The Machine, and Daft Punk, our music explores themes of love, loss, and liberation.</p>
+      <h2>Behind the Scenes</h2>
+      <iframe src="https://www.youtube.com/embed/DbLtQy00Sm8" title="10 Music Documentaries you NEED to see!"></iframe>
+      <iframe src="https://www.youtube.com/embed/TjEhKtnOzoo" title="Filming a SHORT DOCUMENTARY as a ONE MAN BAND ..."></iframe>
+      <iframe src="https://www.youtube.com/embed/BabX8k1myTc" title="The Musicians Behind The Stars | Hired Gun | Full Music ..."></iframe>
+      <iframe src="https://www.youtube.com/embed/8ZAjlptPaXg" title="Going backstage with an indie band | 2025 music documentary"></iframe>
+      <iframe src="https://www.youtube.com/embed/fQT3DGAoFI8" title="Coldplay: Behind the Stage (FULL DOCUMENTARY) Chris ..."></iframe>
+      <iframe src="https://www.youtube.com/embed/BZxKi2Qr7DI" title="How We Captured Abbey Road Magic in One Take — Behind ..."></iframe>
+    </section>
+
+    <section class="timeline">
+      <h2>Band Timeline</h2>
+      <div class="timeline-entry">
+        <h3>2020</h3>
+        <p>Band formed in [City], first jam session in a garage.</p>
+      </div>
+      <div class="timeline-entry">
+        <h3>2021</h3>
+        <p>Released debut EP and played local venues.</p>
+      </div>
+      <div class="timeline-entry">
+        <h3>2022</h3>
+        <p>First national tour and viral single release.</p>
+      </div>
+      <div class="timeline-entry">
+        <h3>2023</h3>
+        <p>Collaborated with international artists and launched merch line.</p>
+      </div>
+      <div class="timeline-entry">
+        <h3>2024</h3>
+        <p>Performed at major festivals and released second album.</p>
+      </div>
     </section>
   </main>
+
   <footer>&copy; 2025 Band Name</footer>
 </body>
 </html>
