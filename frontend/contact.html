@@ -4,6 +4,63 @@
   <meta charset="UTF-8" />
   <title>Contact</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .contact-section {
+      max-width: 700px;
+      margin: 2em auto;
+      padding: 2em;
+      background: #222;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+    }
+
+    .contact-section h2 {
+      text-align: center;
+      color: #ffd700;
+      margin-bottom: 1em;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 1em;
+      color: #eee;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.7em;
+      margin-top: 0.3em;
+      border: none;
+      border-radius: 4px;
+      background: #111;
+      color: #eee;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    button {
+      padding: 0.7em 1.5em;
+      background: #00ffff;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #00dddd;
+    }
+
+    #response {
+      text-align: center;
+      margin-top: 1em;
+      font-weight: bold;
+      color: #ccc;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -13,18 +70,32 @@
       <a href="about.html">About</a>
       <a href="discography.html">Discography</a>
       <a href="tour.html">Tour Dates</a>
+      <a href="videos.html">Videos</a>
+      <a href="presskit.html">Press Kit</a>
+      <a href="documentary.html">Documentary</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
+
   <main>
-    <form id="contact-form">
-      <label>Name: <input type="text" name="name" required /></label><br />
-      <label>Email: <input type="email" name="email" required /></label><br />
-      <label>Message: <textarea name="message" required></textarea></label><br />
-      <button type="submit">Send</button>
-    </form>
-    <p id="response"></p>
+    <section class="contact-section" aria-label="Contact form for fan messages or booking inquiries">
+      <h2>Send Us a Message</h2>
+      <form id="contact-form">
+        <label for="name">Name:
+          <input type="text" id="name" name="name" required />
+        </label>
+        <label for="email">Email:
+          <input type="email" id="email" name="email" required />
+        </label>
+        <label for="message">Message:
+          <textarea id="message" name="message" required></textarea>
+        </label>
+        <button type="submit">Send</button>
+      </form>
+      <p id="response" role="status"></p>
+    </section>
   </main>
+
   <footer>&copy; 2025 Band Name</footer>
   <script src="script.js"></script>
 </body>

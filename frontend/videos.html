@@ -2,29 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Documentary</title>
+  <title>Videos</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    .doc-section {
+    .video-section {
       max-width: 1000px;
       margin: 2em auto;
-      padding: 2em;
-      background: #222;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+      padding: 1em;
     }
 
-    .doc-section h2 {
+    .video-section h2 {
+      text-align: center;
       color: #ffd700;
-      text-align: center;
       margin-bottom: 1em;
-    }
-
-    .doc-section p {
-      text-align: center;
-      font-size: 1.1em;
-      color: #ccc;
-      margin-bottom: 2em;
     }
 
     .video-gallery {
@@ -49,13 +39,13 @@
       text-align: center;
       margin-top: 0.5em;
       font-weight: bold;
-      color: #eee;
+      color: #ccc;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Documentary</h1>
+    <h1>Videos</h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -69,17 +59,19 @@
   </header>
 
   <main>
-    <section class="doc-section" aria-label="Band documentary and behind-the-scenes videos">
-      <h2>Our Journey</h2>
-      <p>From garage rehearsals to global stages, this documentary captures the heart of our band’s evolution. Dive into our story, struggles, and triumphs.</p>
-
+    <section class="video-section">
+      <h2>Watch Our Latest Performances</h2>
       <div class="video-gallery">
         <div class="video-card">
-          <iframe src="https://www.youtube.com/embed/DbLtQy00Sm8" title="Band Documentary" allowfullscreen></iframe>
-          <p>Band Documentary</p>
+          <iframe src="https://www.youtube.com/embed/DbLtQy00Sm8" title="Live Performance" allowfullscreen></iframe>
+          <p>Live Performance</p>
         </div>
         <div class="video-card">
-          <iframe src="https://www.youtube.com/embed/BZxKi2Qr7DI" title="Behind the Scenes" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/BZxKi2Qr7DI" title="Studio Session" allowfullscreen></iframe>
+          <p>Studio Session</p>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/fQT3DGAoFI8" title="Behind the Scenes" allowfullscreen></iframe>
           <p>Behind the Scenes</p>
         </div>
       </div>

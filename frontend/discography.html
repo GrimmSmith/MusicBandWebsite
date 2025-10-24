@@ -4,6 +4,60 @@
   <meta charset="UTF-8" />
   <title>Discography</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .discography-section {
+      max-width: 1000px;
+      margin: 2em auto;
+      padding: 2em;
+    }
+
+    .discography-section h2 {
+      text-align: center;
+      color: #ffd700;
+      margin-bottom: 1em;
+    }
+
+    .album-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2em;
+      justify-content: center;
+    }
+
+    .album-card {
+      background: #222;
+      padding: 1em;
+      border-radius: 8px;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .album-card:hover {
+      transform: scale(1.03);
+    }
+
+    .album-card h3 {
+      color: #ffd700;
+      margin-bottom: 0.5em;
+    }
+
+    .album-card p {
+      color: #ccc;
+      margin-bottom: 0.5em;
+    }
+
+    .album-card a {
+      color: #00ffff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .album-card a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -13,16 +67,36 @@
       <a href="about.html">About</a>
       <a href="discography.html">Discography</a>
       <a href="tour.html">Tour Dates</a>
+      <a href="videos.html">Videos</a>
+      <a href="presskit.html">Press Kit</a>
+      <a href="documentary.html">Documentary</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
+
   <main>
-    <ul>
-      <li><strong>Album 1</strong> (2023)</li>
-      <li><strong>Album 2</strong> (2024)</li>
-      <li><strong>Single: Hit Track</strong> (2025)</li>
-    </ul>
+    <section class="discography-section" aria-label="Band discography">
+      <h2>Our Releases</h2>
+      <div class="album-grid">
+        <div class="album-card">
+          <h3>Echoes of Midnight</h3>
+          <p>Released: 2023</p>
+          <a href="#">Listen on Spotify</a>
+        </div>
+        <div class="album-card">
+          <h3>Neon Pulse</h3>
+          <p>Released: 2024</p>
+          <a href="#">Listen on Apple Music</a>
+        </div>
+        <div class="album-card">
+          <h3>Single: Firelight</h3>
+          <p>Released: 2025</p>
+          <a href="#">Watch on YouTube</a>
+        </div>
+      </div>
+    </section>
   </main>
+
   <footer>&copy; 2025 Band Name</footer>
 </body>
 </html>

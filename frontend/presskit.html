@@ -8,23 +8,43 @@
     .press-section {
       max-width: 800px;
       margin: 2em auto;
-      padding: 1em;
+      padding: 2em;
       background: #222;
       border-radius: 8px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
     }
+
     .press-section h2 {
       color: #ffd700;
+      text-align: center;
+      margin-bottom: 1em;
     }
-    .press-section a {
-      color: #00ffff;
-      text-decoration: underline;
-    }
+
     .press-section ul {
       list-style: none;
       padding: 0;
     }
+
     .press-section li {
-      margin-bottom: 1em;
+      margin-bottom: 1.5em;
+      background: #111;
+      padding: 1em;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+
+    .press-section li:hover {
+      background: #333;
+    }
+
+    .press-section a {
+      color: #00ffff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .press-section a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -44,13 +64,13 @@
   </header>
 
   <main>
-    <section class="press-section">
+    <section class="press-section" aria-label="Downloadable press kit assets">
       <h2>Downloadable Assets</h2>
       <ul>
-        <li><a href="/assets/presskit/bio.pdf" download>Band Bio (PDF)</a></li>
-        <li><a href="/assets/presskit/photos.zip" download>High-Res Photos (ZIP)</a></li>
-        <li><a href="/assets/presskit/tech-rider.pdf" download>Technical Rider (PDF)</a></li>
-        <li><a href="/assets/presskit/contact-sheet.pdf" download>Booking Contact Sheet (PDF)</a></li>
+        <li><a href="/assets/presskit/bio.pdf" download>📄 Band Bio (PDF)</a></li>
+        <li><a href="/assets/presskit/photos.zip" download>🖼️ High-Res Photos (ZIP)</a></li>
+        <li><a href="/assets/presskit/tech-rider.pdf" download>🎛️ Technical Rider (PDF)</a></li>
+        <li><a href="/assets/presskit/contact-sheet.pdf" download>📇 Booking Contact Sheet (PDF)</a></li>
       </ul>
     </section>
   </main>

@@ -2,62 +2,57 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Band Name - Home</title>
+  <title>About - Band Name</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    .hero {
-      text-align: center;
-      padding: 4em 2em;
-      background: linear-gradient(to right, #111, #222);
-    }
-    .hero h1 {
-      font-size: 3em;
-      margin-bottom: 0.2em;
-      color: #ffd700;
-    }
-    .hero p {
-      font-size: 1.2em;
-      color: #ccc;
-    }
-    .highlight {
-      background: #333;
-      padding: 2em;
+    .about-section {
+      max-width: 1000px;
       margin: 2em auto;
-      max-width: 600px;
-      border-radius: 8px;
+      padding: 2em;
     }
-    .highlight h2 {
-      color: #00ffff;
-    }
-    .video-feature {
+
+    .about-section h2 {
+      color: #ffd700;
+      margin-bottom: 1em;
       text-align: center;
-      margin: 2em 0;
     }
-    iframe {
-      width: 100%;
-      max-width: 560px;
-      height: 315px;
+
+    .about-section p {
+      color: #ccc;
+      margin-bottom: 1.5em;
+      line-height: 1.6;
+    }
+
+    .member-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2em;
+      justify-content: center;
+    }
+
+    .member-card {
+      background: #222;
+      padding: 1em;
       border-radius: 8px;
-    }
-    .subscribe {
-      text-align: center;
-      margin: 2em 0;
-    }
-    .subscribe input {
-      padding: 0.5em;
-      margin-right: 0.5em;
       width: 250px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
     }
-    .subscribe button {
-      padding: 0.5em 1em;
-      background: #00ffff;
-      border: none;
-      cursor: pointer;
+
+    .member-card h3 {
+      color: #00ffff;
+      margin-bottom: 0.5em;
+    }
+
+    .member-card p {
+      font-size: 0.95em;
+      color: #aaa;
     }
   </style>
 </head>
 <body>
   <header>
+    <h1>About Us</h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -71,29 +66,33 @@
   </header>
 
   <main>
-    <section class="hero">
-      <h1>Band Name</h1>
-      <p>Genre-bending sound. Electrifying performances. Welcome to our world.</p>
-    </section>
+    <section class="about-section">
+      <h2>Our Story</h2>
+      <p>Formed in the heart of the indie scene, Band Name blends raw emotion with genre-bending soundscapes. From intimate acoustic sets to electrifying festival stages, our journey has been fueled by passion, resilience, and the power of connection.</p>
+      <p>We believe music is more than sound — it's a story, a movement, a memory. Every track we release and every show we play is a reflection of that belief.</p>
 
-    <section class="highlight" id="latest-event">
-      <h2>Next Show</h2>
-      <p>Loading next event...</p>
-    </section>
-
-    <section class="video-feature">
-      <h2>Featured Video</h2>
-      <iframe src="https://www.youtube.com/embed/DbLtQy00Sm8" title="Band Documentary"></iframe>
-    </section>
-
-    <section class="subscribe">
-      <h2>Join Our Mailing List</h2>
-      <form id="subscribe-form">
-        <input type="email" name="email" placeholder="Your email" required />
-        <button type="submit">Subscribe</button>
-      </form>
-      <p id="subscribe-response"></p>
+      <h2>Meet the Band</h2>
+      <div class="member-grid">
+        <div class="member-card">
+          <h3>Alex Rivera</h3>
+          <p>Lead vocals & rhythm guitar. The soul of the band, blending poetic lyrics with powerful delivery.</p>
+        </div>
+        <div class="member-card">
+          <h3>Jade Lin</h3>
+          <p>Drums & percussion. Driving the heartbeat of every track with precision and flair.</p>
+        </div>
+        <div class="member-card">
+          <h3>Leo Martinez</h3>
+          <p>Bass & synth. Crafting grooves that move bodies and minds.</p>
+        </div>
+        <div class="member-card">
+          <h3>Samira Khan</h3>
+          <p>Lead guitar. Melodic architect and sonic explorer.</p>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
+  <footer>&copy; 2025 Band Name</footer>
+</body>
+</html>

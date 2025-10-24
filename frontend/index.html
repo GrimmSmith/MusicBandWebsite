@@ -5,24 +5,108 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Band Name - Home</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .hero {
+      text-align: center;
+      padding: 4em 2em;
+      background: linear-gradient(to right, #111, #222);
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 0.2em;
+      color: #ffd700;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      color: #ccc;
+    }
+
+    .highlight, .subscribe, .video-feature {
+      max-width: 600px;
+      margin: 2em auto;
+      padding: 1em;
+      background: #222;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .highlight h2, .subscribe h2, .video-feature h2 {
+      color: #00ffff;
+      margin-bottom: 0.5em;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 560px;
+      height: 315px;
+      border-radius: 8px;
+    }
+
+    .subscribe input {
+      padding: 0.5em;
+      margin-right: 0.5em;
+      width: 250px;
+      border-radius: 4px;
+      border: none;
+    }
+
+    .subscribe button {
+      padding: 0.5em 1em;
+      background: #00ffff;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    #subscribe-response {
+      margin-top: 1em;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Band Name</h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="discography.html">Discography</a>
       <a href="tour.html">Tour Dates</a>
+      <a href="videos.html">Videos</a>
+      <a href="presskit.html">Press Kit</a>
+      <a href="documentary.html">Documentary</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
+
   <main>
-    <section>
-      <h2>Welcome to Our Official Site</h2>
-      <p>Catch the latest releases, tour dates, and more!</p>
+    <section class="hero">
+      <h1>Band Name</h1>
+      <p>Genre-bending sound. Electrifying performances. Welcome to our world.</p>
+    </section>
+
+    <section class="highlight" id="latest-event">
+      <h2>Next Show</h2>
+      <p>Loading next event...</p>
+    </section>
+
+    <section class="video-feature">
+      <h2>Featured Video</h2>
+      <iframe src="https://www.youtube.com/embed/DbLtQy00Sm8" title="Band Documentary" allowfullscreen></iframe>
+    </section>
+
+    <section class="subscribe">
+      <h2>Join Our Mailing List</h2>
+      <form id="subscribe-form">
+        <input type="email" name="email" placeholder="Your email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+      <p id="subscribe-response" role="status"></p>
     </section>
   </main>
+
   <footer>&copy; 2025 Band Name</footer>
+  <script src="script.js"></script>
 </body>
 </html>

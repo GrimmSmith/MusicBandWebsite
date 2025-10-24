@@ -5,30 +5,57 @@
   <title>Tour Dates</title>
   <link rel="stylesheet" href="style.css" />
   <style>
+    .tour-section {
+      max-width: 1000px;
+      margin: 2em auto;
+      padding: 1em;
+    }
+
+    .tour-section h2 {
+      text-align: center;
+      color: #ffd700;
+      margin-bottom: 1em;
+    }
+
     .event-list {
       display: flex;
       flex-wrap: wrap;
-      gap: 1em;
+      gap: 1.5em;
       justify-content: center;
-      margin-top: 2em;
     }
+
     .event-card {
       background: #222;
       border-radius: 8px;
       padding: 1em;
       width: 300px;
       box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s ease;
     }
+
+    .event-card:hover {
+      transform: scale(1.03);
+    }
+
     .event-card h3 {
       margin: 0;
       color: #ffd700;
     }
+
     .event-card p {
       margin: 0.5em 0;
     }
+
     .event-card a {
       color: #00ffff;
       text-decoration: underline;
+    }
+
+    .no-events, .error {
+      text-align: center;
+      font-style: italic;
+      color: #ccc;
+      margin-top: 2em;
     }
   </style>
 </head>
@@ -40,14 +67,17 @@
       <a href="about.html">About</a>
       <a href="discography.html">Discography</a>
       <a href="tour.html">Tour Dates</a>
+      <a href="videos.html">Videos</a>
+      <a href="presskit.html">Press Kit</a>
+      <a href="documentary.html">Documentary</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <main>
-    <section>
-      <p>Catch us live! Here are our upcoming shows:</p>
-      <div id="event-list" class="event-list">Loading events...</div>
+    <section class="tour-section">
+      <h2>Catch Us Live!</h2>
+      <div id="event-list" class="event-list" role="region" aria-live="polite">Loading events...</div>
     </section>
   </main>
 
