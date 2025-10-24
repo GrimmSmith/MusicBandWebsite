@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="{% static 'style.css' %}" />
+  <style>
+    .auth-form {
+      max-width: 500px;
+      margin: 2em auto;
+      padding: 2em;
+      background: #222;
+      border-radius: 8px;
+    }
+    .auth-form h2 {
+      text-align: center;
+      color: #ffd700;
+      margin-bottom: 1em;
+    }
+    .auth-form label {
+      display: block;
+      margin-bottom: 1em;
+      color: #eee;
+    }
+    .auth-form input {
+      width: 100%;
+      padding: 0.7em;
+      margin-top: 0.3em;
+      border: none;
+      border-radius: 4px;
+      background: #111;
+      color: #eee;
+    }
+    .auth-form button {
+      padding: 0.7em 1.5em;
+      background: #00ffff;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+      font-weight: bold;
+      margin-top: 1em;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <form method="POST" class="auth-form">
+      {% csrf_token %}
+      <h2>Create an Account</h2>
+      {{ form.as_p }}
+      <button type="submit">Sign Up</button>
+    </form>
+  </main>
+</body>
+</html>
