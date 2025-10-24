@@ -1,6 +1,18 @@
-// Load tour events dynamically with enhanced layout
-const tourContainer = document.getElementById('event-list') || document.getElementById('tour-list');
-if (tourContainer) {
+// Utility: safely update a status box
+function updateStatus(element, message, color = '#ccc') {
+  if (element) {
+    element.textContent = message;
+    element.style.color = color;
+    element.setAttribute('role', 'status');
+    element.focus();
+  }
+}
+
+// Load tour events dynamically
+function loadTourEvents() {
+  const tourContainer = document.getElementById('event-list') || document.getElementById('tour-list');
+  if (!tourContainer) return;
+
   fetch('/api/tour-dates')
     .then(res => {
       if (!res.ok) throw new Error('Network response was not ok');
@@ -34,16 +46,16 @@ if (tourContainer) {
     });
 }
 
-// Handle contact form submission with feedback and accessibility
-const contactForm = document.getElementById('contact-form');
-if (contactForm) {
+// Handle contact form submission
+function handleContactForm() {
+  const contactForm = document.getElementById('contact-form');
+  const responseBox = document.getElementById('response');
+  if (!contactForm || !responseBox) return;
+
   contactForm.addEventListener('submit', e => {
     e.preventDefault();
     const formData = new FormData(contactForm);
-    const responseBox = document.getElementById('response');
-    responseBox.textContent = 'Sending...';
-    responseBox.style.color = '#ccc';
-    responseBox.setAttribute('role', 'status');
+    updateStatus(responseBox, 'Sending...');
 
     fetch('/api/contact', {
       method: 'POST',
@@ -55,16 +67,50 @@ if (contactForm) {
         return res.json();
       })
       .then(data => {
-        responseBox.textContent = data.message || 'Message sent successfully!';
-        responseBox.style.color = 'lime';
+        updateStatus(responseBox, data.message || 'Message sent successfully!', 'lime');
         contactForm.reset();
-        responseBox.focus();
       })
       .catch(error => {
         console.error('Error sending contact message:', error);
-        responseBox.textContent = 'Failed to send message. Please try again later.';
-        responseBox.style.color = 'red';
-        responseBox.focus();
+        updateStatus(responseBox, 'Failed to send message. Please try again later.', 'red');
       });
   });
 }
+
+// Handle mailing list signup
+function handleSubscribeForm() {
+  const subscribeForm = document.getElementById('subscribe-form');
+  const responseBox = document.getElementById('subscribe-response');
+  if (!subscribeForm || !responseBox) return;
+
+  subscribeForm.addEventListener('submit', e => {
+    e.preventDefault();
+    const formData = new FormData(subscribeForm);
+    updateStatus(responseBox, 'Subscribing...');
+
+    fetch('/api/subscribe', {
+      method: 'POST',
+      body: JSON.stringify(Object.fromEntries(formData)),
+      headers: { 'Content-Type': 'application/json' }
+    })
+      .then(res => {
+        if (!res.ok) throw new Error('Network response was not ok');
+        return res.json();
+      })
+      .then(data => {
+        updateStatus(responseBox, data.message || 'Thanks for subscribing!', 'lime');
+        subscribeForm.reset();
+      })
+      .catch(error => {
+        console.error('Error subscribing:', error);
+        updateStatus(responseBox, 'Subscription failed. Try again.', 'red');
+      });
+  });
+}
+
+// Initialize all dynamic features
+document.addEventListener('DOMContentLoaded', () => {
+  loadTourEvents();
+  handleContactForm();
+  handleSubscribeForm();
+});
